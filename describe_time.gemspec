@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'describe_time'
-  s.version = '0.0.2'
+  s.version = '0.0.4'
   s.date = '2012-06-26'
   s.summary = 'Format date and time as readable strings'
   s.authors = [ 'Jonatan Magnusson' ]

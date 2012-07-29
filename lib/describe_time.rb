@@ -33,8 +33,14 @@ module DescribeTime
 end
 
 class Time
-  def describe
-    DescribeTime.describe_time(self, Time.now)
-    puts "no chance"
+  def describe(fmt)
+    case fmt
+    when :time_or_date
+      DescribeTime.time_or_date(self)
+    when :approximate
+      DescribeTime.approximate(self)
+    else
+      DescribeTime.strftime('%Y-%m-%d %H:%M')
+    end
   end
 end
