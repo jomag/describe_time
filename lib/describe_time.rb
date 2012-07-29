@@ -1,4 +1,12 @@
 module DescribeTime
+  def self.time_or_date(tm = Time.now, now = Time.now, time_fmt = '%H:%M', date_fmt = '%Y-%m-%d')
+    if tm.year == now.year && tm.yday == now.yday then
+      tm.strftime(time_fmt)
+    else
+      tm.strftime(date_fmt)
+    end
+  end
+
   def self.approximate(the_time = Time.now, current_time = Time.now)
     ts = current_time - the_time
 
